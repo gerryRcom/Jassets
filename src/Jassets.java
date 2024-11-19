@@ -15,9 +15,9 @@ public class Jassets {
 		WorkstationAsset workstationAssets[] = {new WorkstationAsset("16GB", 8, "SSD", "Merketing", 'Y'), new WorkstationAsset("16GB", 8, "SSD", "HR", 'N')};
 		// Declare required variables.
 		int menuChoice = 0;
+		// Enter a loop until a valid option is selected.
 		
-		
-		System.out.println("### Assets loaded.");
+		jassetMenu.loadingMenu();
 		do {
 			
 
@@ -26,9 +26,14 @@ public class Jassets {
 		// Run user input through try/ catch to check for invalid user input
 		try {
 			menuChoice = menuInput.nextInt();
+			//System.out.println("top mc: " + menuChoice);
 			// Check what option the user wants.
 			if (menuChoice == 1) {
-				jassetMenu.viewAssets();
+
+				
+				do {
+					// Display view assets menu.
+					jassetMenu.viewAssets();
 				try {
 					menuChoice = menuInput.nextInt();
 					// Check what option the user wants.
@@ -45,24 +50,33 @@ public class Jassets {
 				}
 				catch (Exception e) {
 					System.out.println("Invalid input detected");
+					// Close scanner
+					menuInput.close();
 					System.exit(1);
 				}
 				// Exit application if user enters 5
 				}while (!(menuChoice == 1 || menuChoice == 2 || menuChoice == 5));
 				System.out.println("Exiting Jasset application");
+				// Close scanner
+				menuInput.close();
 				System.exit(0);
+			}
 			}
 		
 		catch (Exception e) {
 			System.out.println("Invalid input detected");
+			// Close scanner
+			menuInput.close();
 			System.exit(1);
 		}
 		
-		System.out.println(menuChoice);
+		System.out.println("bot mc: " + menuChoice);
 		
 		// Exit application if user enters 5
 		}while (!(menuChoice == 1 || menuChoice == 5));
 		System.out.println("Exiting Jasset application");
+		// Close scanner
+		menuInput.close();
 		System.exit(0);
 	}
 
