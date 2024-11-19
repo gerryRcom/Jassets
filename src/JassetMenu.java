@@ -1,14 +1,14 @@
 // Class for the Jasset menu system which will be called during runtime
 public class JassetMenu {
 	
-	public void mainMenu(){
-		String loadingMessage = ". . . . . .";
+	public void loadingMenu(){
+		String loadingMessage = ". . . .";
 		System.out.println("### Jasset Asset Manager");
 		System.out.println("###");
 		System.out.print("### Populating assets ");
 		for (int i = 0; i < loadingMessage.length(); i++) {
 			try {
-				Thread.sleep(500);
+				Thread.sleep(400);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -16,7 +16,10 @@ public class JassetMenu {
 			System.out.print(loadingMessage.charAt(i));
 		}
 		System.out.println(" .");
-		//System.out.println("### Assets loaded.");
+	}
+	
+	
+	public void mainMenu(){
 		System.out.println("###");
 		System.out.println("### Please choose an option from the menu below");
 		System.out.println("### -------------------------------------------");
