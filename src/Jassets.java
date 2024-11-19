@@ -7,12 +7,17 @@ public class Jassets {
 	public static void main(String[] args) {
 		// Declare our menu object for use during the program
 		JassetMenu jassetMenu = new JassetMenu();
+		// Declare input scanner for user input in menu
+		Scanner menuInput = new Scanner(System.in);
+		
+		// Populate asset arrays
 		ServerAsset serverAssets[] = {new ServerAsset("8GB", 16, "SSD", "Directory", "10.10.10.100"), new ServerAsset("16GB", 8, "HD", "Fileserver", "10.10.10.110")};
 		WorkstationAsset workstationAssets[] = {new WorkstationAsset("16GB", 8, "SSD", "Merketing", 'Y'), new WorkstationAsset("16GB", 8, "SSD", "HR", 'N')};
 		// Declare required variables.
 		int menuChoice = 0;
-		// Declare input scanner for user input in menu
-		Scanner menuInput = new Scanner(System.in);
+		
+		
+		System.out.println("### Assets loaded.");
 		do {
 			
 

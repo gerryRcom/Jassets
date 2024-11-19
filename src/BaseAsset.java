@@ -6,6 +6,8 @@ public abstract class BaseAsset {
 	// Declare variables that will be common across all asset types
 	String assetMemory = "";
 	int assetCores = 0;
+	String storageType = "";
+
 	
 	
 }
