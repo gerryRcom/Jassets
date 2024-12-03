@@ -15,13 +15,20 @@ public class WorkstationAsset extends BaseAsset {
 		this.workstationPortable = portable;
 	}
 	
+	// Default constructor so new type can be instantiated with no values
+	public WorkstationAsset() {
+		
+	}
+	
+	@Override // Implement method
 	public void niceOutput() {
-		System.out.println("###################");
+		System.out.println("### WORKSTATION ###");
 		System.out.println("Asset ID: "+ this.workstationAssetID);
 		System.out.println("Memory: "+ this.assetMemory);
 		System.out.println("CPU Cores: "+ this.assetCores);
 		System.out.println("Storage Type: "+ this.storageType);
 		System.out.println("Service: "+ this.workstationDept);
 		System.out.println("IP: "+ this.workstationPortable);
+		System.out.println("###################");
 	}
 }

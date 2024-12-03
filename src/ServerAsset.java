@@ -15,13 +15,21 @@ public class ServerAsset extends BaseAsset {
 		this.serverIP = ip;		
 	}
 	
+	
+	// Default constructor so new type can be instantiated with no values
+	public ServerAsset() {
+		
+	}
+	
+	@Override
 	public void niceOutput() {
-		System.out.println("###################");
+		System.out.println("##### SERVER ######");
 		System.out.println("Asset ID: "+ this.serverAssetID);
 		System.out.println("Memory: "+ this.assetMemory);
 		System.out.println("CPU Cores: "+ this.assetCores);
 		System.out.println("Storage Type: "+ this.storageType);
 		System.out.println("Service: "+ this.serverService);
 		System.out.println("IP: "+ this.serverIP);
+		System.out.println("###################");
 	}
 }

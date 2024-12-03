@@ -7,7 +7,10 @@ public abstract class BaseAsset {
 	String assetMemory = "";
 	int assetCores = 0;
 	String storageType = "";
+	
+	// Abstract method for formatted output, will be implemented by sub-class
+	public abstract void niceOutput();
 
 	
-	
+
 }
