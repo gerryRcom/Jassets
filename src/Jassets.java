@@ -1,6 +1,7 @@
 // Required imports here
 // scanner for user input
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Jassets {
 
@@ -10,28 +11,33 @@ public class Jassets {
 		// Declare input scanner for user input in menu
 		Scanner menuInput = new Scanner(System.in);
 		
-		// Declare and Populate serverAsset array
-		ServerAsset serverAssets[] = {new ServerAsset("8GB", 16, "SSD", "Directory", "10.10.10.100"), new ServerAsset("16GB", 8, "HD", "Fileserver", "10.10.10.110")};
+		// Declare serverAssets ArrayList
+		ArrayList<ServerAsset> serverAssets = new ArrayList<ServerAsset>();
 		
-		// Declare empty workStationAsset array
+		// Populate serverAssets ArrayList
+		serverAssets.add(new ServerAsset("8GB", 16, "SSD", "Directory", "10.10.10.100"));
+		serverAssets.add(new ServerAsset("16GB", 8, "HD", "Fileserver", "10.10.10.110"));
+		// Add an additional element to serverAssets ArrayList
+		serverAssets.add(new ServerAsset("32GB", 16, "SSD", "Directory", "10.10.10.120"));
+	
+		
+		// Declare empty workStationAssets Array
 		WorkstationAsset workstationAssets[] = new WorkstationAsset[4];
-		
 		// Create workStationAssets to populate Array
 		WorkstationAsset ws01 = new WorkstationAsset("32GB", 8, "SSD", "Marketing", 'Y');
 		WorkstationAsset ws02 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
 		WorkstationAsset ws03 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
 		WorkstationAsset ws04 = new WorkstationAsset("16GB", 8, "SSD", "HR", 'N');
 		
-		// populate workstationAsset array
+		// populate workstationAssets Array
 		workstationAssets[0] = ws01;
 		workstationAssets[1] = ws02;
 		workstationAssets[2] = ws03;
 		workstationAssets[3] = ws04;
-		
-		// Adding element to array
+		// Add an additional element to workstationAssets Array
 		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", "Marketing", 'Y')};
 		
-		
+
 		// Declare required variables.
 		int menuChoice = 0;
 		// Enter a loop until a valid option is selected.
@@ -61,8 +67,8 @@ public class Jassets {
 						}
 					}
 					else if (menuChoice == 2) {
-						for (int x = 0; x < serverAssets.length; x++) {
-							serverAssets[x].niceOutput();
+						for (int x = 0; x < serverAssets.size(); x++) {
+							serverAssets.get(x).niceOutput();
 						}
 					}
 				}
