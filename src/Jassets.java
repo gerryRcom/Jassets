@@ -27,6 +27,11 @@ public class Jassets {
 		workstationAssets[1] = ws02;
 		workstationAssets[2] = ws03;
 		workstationAssets[3] = ws04;
+		
+		// Adding element to array
+		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", "Marketing", 'Y')};
+		
+		
 		// Declare required variables.
 		int menuChoice = 0;
 		// Enter a loop until a valid option is selected.
@@ -51,8 +56,8 @@ public class Jassets {
 					menuChoice = menuInput.nextInt();
 					// Check what option the user wants.
 					if (menuChoice == 1) {
-						for (int x = 0; x < workstationAssets.length; x++) {
-							workstationAssets[x].niceOutput();
+						for (int x = 0; x < workstationAssetsB.length; x++) {
+							workstationAssetsB[x].niceOutput();
 						}
 					}
 					else if (menuChoice == 2) {
