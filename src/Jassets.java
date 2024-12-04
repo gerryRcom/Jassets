@@ -14,8 +14,19 @@ public class Jassets {
 		ServerAsset serverAssets[] = {new ServerAsset("8GB", 16, "SSD", "Directory", "10.10.10.100"), new ServerAsset("16GB", 8, "HD", "Fileserver", "10.10.10.110")};
 		
 		// Declare empty workStationAsset array
-		//WorkstationAsset workstationAssets[] = {new WorkstationAsset("16GB", 8, "SSD", "Merketing", 'Y'), new WorkstationAsset("16GB", 8, "SSD", "HR", 'N')};
 		WorkstationAsset workstationAssets[] = new WorkstationAsset[4];
+		
+		// Create workStationAssets to populate Array
+		WorkstationAsset ws01 = new WorkstationAsset("32GB", 8, "SSD", "Marketing", 'Y');
+		WorkstationAsset ws02 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
+		WorkstationAsset ws03 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
+		WorkstationAsset ws04 = new WorkstationAsset("16GB", 8, "SSD", "HR", 'N');
+		
+		// populate workstationAsset array
+		workstationAssets[0] = ws01;
+		workstationAssets[1] = ws02;
+		workstationAssets[2] = ws03;
+		workstationAssets[3] = ws04;
 		// Declare required variables.
 		int menuChoice = 0;
 		// Enter a loop until a valid option is selected.
