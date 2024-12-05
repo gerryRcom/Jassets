@@ -11,6 +11,21 @@ public abstract class BaseAsset {
 	// Abstract method for formatted output, will be implemented by sub-class
 	public abstract void niceOutput();
 
+	// Getter to return asset memory
+	public String getAssetMemory() {
+		return assetMemory;
+	}
+
+	// Getter to return asset cores
+	public int getAssetCores() {
+		return assetCores;
+	}
+
+	// Getter to return asset storage type
+	public String getStorageType() {
+		return storageType;
+	}
+
 	
 
 }

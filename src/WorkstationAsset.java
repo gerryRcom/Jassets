@@ -20,15 +20,30 @@ public class WorkstationAsset extends BaseAsset {
 		
 	}
 	
+	// Getter to return workstation dept
+	public String getWorkstationDept() {
+		return workstationDept;
+	}
+
+	// Getter to return workstation portable status
+	public char getWorkstationPortable() {
+		return workstationPortable;
+	}
+
+	// Getter to return workstation asset id
+	public int getWorkstationAssetID() {
+		return workstationAssetID;
+	}
+
 	@Override // Implement method
 	public void niceOutput() {
 		System.out.println("### WORKSTATION ###");
-		System.out.println("Asset ID: "+ this.workstationAssetID);
-		System.out.println("Memory: "+ this.assetMemory);
-		System.out.println("CPU Cores: "+ this.assetCores);
-		System.out.println("Storage Type: "+ this.storageType);
-		System.out.println("Service: "+ this.workstationDept);
-		System.out.println("IP: "+ this.workstationPortable);
+		System.out.println("Asset ID: "+ getWorkstationAssetID());
+		System.out.println("Memory: "+ getAssetMemory());
+		System.out.println("CPU Cores: "+ getAssetCores());
+		System.out.println("Storage Type: "+ getStorageType());
+		System.out.println("Service: "+ getWorkstationDept());
+		System.out.println("Portable: "+ getWorkstationPortable());
 		System.out.println("###################");
 	}
 }

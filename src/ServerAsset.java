@@ -15,7 +15,22 @@ public class ServerAsset extends BaseAsset {
 		this.serverIP = ip;		
 	}
 	
-	
+	// Getter to return server service
+	public String getServerService() {
+		return serverService;
+	}
+
+	// Getter to return server ip
+	public String getServerIP() {
+		return serverIP;
+	}
+
+	// Getter to return server assetid
+	public int getServerAssetID() {
+		return serverAssetID;
+	}
+
+
 	// Default constructor so new type can be instantiated with no values
 	public ServerAsset() {
 		
@@ -24,12 +39,12 @@ public class ServerAsset extends BaseAsset {
 	@Override
 	public void niceOutput() {
 		System.out.println("##### SERVER ######");
-		System.out.println("Asset ID: "+ this.serverAssetID);
-		System.out.println("Memory: "+ this.assetMemory);
-		System.out.println("CPU Cores: "+ this.assetCores);
-		System.out.println("Storage Type: "+ this.storageType);
-		System.out.println("Service: "+ this.serverService);
-		System.out.println("IP: "+ this.serverIP);
+		System.out.println("Asset ID: "+ getServerAssetID());
+		System.out.println("Memory: "+ getAssetMemory());
+		System.out.println("CPU Cores: "+ getAssetCores());
+		System.out.println("Storage Type: "+ getStorageType());
+		System.out.println("Service: "+ getServerService());
+		System.out.println("IP: "+ getServerIP());
 		System.out.println("###################");
 	}
 }
