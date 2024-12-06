@@ -6,13 +6,13 @@ public class WorkstationAsset extends BaseAsset {
 	int workstationAssetID = 0;
 	
 	public WorkstationAsset(String memory, int cores, String storage, String department, char portable) {
-		BaseAsset.assetID++;
-		workstationAssetID = BaseAsset.assetID;
-		this.assetMemory = memory;
-		this.assetCores = cores;
-		this.storageType = storage;
-		this.workstationDept = department;
-		this.workstationPortable = portable;
+		setAssetID();
+		setWorkstationAssetID(getAssetID());
+		setAssetMemory(memory);
+		setAssetCores(cores);
+		setStorageType(storage);
+		setWorkstationDept(department);
+		setWorkstationPortable(portable);
 	}
 	
 	// Default constructor so new type can be instantiated with no values
@@ -24,15 +24,27 @@ public class WorkstationAsset extends BaseAsset {
 	public String getWorkstationDept() {
 		return workstationDept;
 	}
-
 	// Getter to return workstation portable status
 	public char getWorkstationPortable() {
 		return workstationPortable;
 	}
-
 	// Getter to return workstation asset id
 	public int getWorkstationAssetID() {
 		return workstationAssetID;
+	}
+	
+	
+	// Setter to assign Department
+	public void setWorkstationDept(String workstationDept) {
+		this.workstationDept = workstationDept;
+	}
+	// Setter to assign portable status
+	public void setWorkstationPortable(char workstationPortable) {
+		this.workstationPortable = workstationPortable;
+	}
+	// Setter to assign asset ID
+	public void setWorkstationAssetID(int workstationAssetID) {
+		this.workstationAssetID = workstationAssetID;
 	}
 
 	@Override // Implement method

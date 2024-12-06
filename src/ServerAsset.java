@@ -6,30 +6,41 @@ public class ServerAsset extends BaseAsset {
 	int serverAssetID = 0;
 	
 	public ServerAsset(String memory, int cores, String storage, String service, String ip) {
-		BaseAsset.assetID++;
-		serverAssetID = BaseAsset.assetID;
-		this.assetMemory = memory;
-		this.assetCores = cores;
-		this.storageType = storage;
-		this.serverService = service;
-		this.serverIP = ip;		
+		setAssetID();
+		setServerAssetID(getAssetID());
+		setAssetMemory(memory);
+		setAssetCores(cores);
+		setStorageType(storage);
+		setServerService(service);
+		setServerIP(ip);		
 	}
 	
 	// Getter to return server service
 	public String getServerService() {
 		return serverService;
 	}
-
 	// Getter to return server ip
 	public String getServerIP() {
 		return serverIP;
 	}
-
 	// Getter to return server assetid
 	public int getServerAssetID() {
 		return serverAssetID;
 	}
+	
 
+	// Setter to assign service
+	public void setServerService(String serverService) {
+		this.serverService = serverService;
+	}
+	// Setter to assign IP
+	public void setServerIP(String serverIP) {
+		this.serverIP = serverIP;
+	}
+	// Setter to assign Asset ID
+	public void setServerAssetID(int serverAssetID) {
+		this.serverAssetID = serverAssetID;
+	}
 
 	// Default constructor so new type can be instantiated with no values
 	public ServerAsset() {
