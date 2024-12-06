@@ -4,7 +4,12 @@ public class ServerAsset extends BaseAsset implements ClassMenu{
 	String serverService = "";
 	String serverIP = "";
 	int serverAssetID = 0;
+
+	// Default constructor so new type can be instantiated with no values if required
+	public ServerAsset() {	
+	}
 	
+	// Main constructor for class including all value parameters.
 	public ServerAsset(String memory, int cores, String storage, String service, String ip) {
 		setAssetID();
 		setServerAssetID(getAssetID());
@@ -42,11 +47,6 @@ public class ServerAsset extends BaseAsset implements ClassMenu{
 		this.serverAssetID = serverAssetID;
 	}
 
-	// Default constructor so new type can be instantiated with no values
-	public ServerAsset() {
-		
-	}
-	
 	@Override
 	public void niceOutput() {
 		System.out.println("##### SERVER ######");

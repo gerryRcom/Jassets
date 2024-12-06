@@ -4,7 +4,13 @@ public class WorkstationAsset extends BaseAsset implements ClassMenu{
 	String workstationDept = "";
 	char workstationPortable = 'N';
 	int workstationAssetID = 0;
+
+	// Default constructor so new type can be instantiated with no values if required
+	public WorkstationAsset() {
+		
+	}
 	
+	// Main constructor for class including all value parameters.
 	public WorkstationAsset(String memory, int cores, String storage, String department, char portable) {
 		setAssetID();
 		setWorkstationAssetID(getAssetID());
@@ -13,11 +19,6 @@ public class WorkstationAsset extends BaseAsset implements ClassMenu{
 		setStorageType(storage);
 		setWorkstationDept(department);
 		setWorkstationPortable(portable);
-	}
-	
-	// Default constructor so new type can be instantiated with no values
-	public WorkstationAsset() {
-		
 	}
 	
 	// Getter to return workstation dept

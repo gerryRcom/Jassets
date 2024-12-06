@@ -62,8 +62,6 @@ public class Jassets {
 			menuChoice = menuInput.nextInt();
 			// Check what option the user wants.
 			if (menuChoice == 1) {
-
-				
 				do {
 					// Display view assets menu.
 					jassetMenu.viewAssets();
@@ -81,36 +79,33 @@ public class Jassets {
 						}
 					}
 				}
+				// Catch if a non-int is input in the menu and exit with a message.
 				catch (Exception e) {
-					System.out.println("Invalid input detected");
+					System.out.println("Invalid input detected, goodbye.");
 					// Close scanner
 					menuInput.close();
 					System.exit(1);
 				}
 				// Exit application if user enters 5
 				}while (!(menuChoice == 5));
-				System.out.println("Exiting Jasset application");
+				System.out.println("Exiting Jasset application, goodbye.");
 				// Close scanner
 				menuInput.close();
 				System.exit(0);
 			}
 			}
-		
+		// Catch if a non-int is input in the menu and exit with a message.
 		catch (Exception e) {
-			System.out.println("Invalid input detected");
+			System.out.println("Invalid input detected, goodbye.");
 			// Close scanner
 			menuInput.close();
 			System.exit(1);
 		}
-		
-		System.out.println("bot mc: " + menuChoice);
-		
 		// Exit application if user enters 5
-		}while (!(menuChoice == 1 || menuChoice == 5));
-		System.out.println("Exiting Jasset application");
+		}while (!(menuChoice == 5));
+		System.out.println("Exiting Jasset application, goodbye.");
 		// Close scanner
 		menuInput.close();
 		System.exit(0);
 	}
-
 }
