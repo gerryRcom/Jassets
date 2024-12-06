@@ -4,6 +4,15 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Jassets {
+	
+	// add enum for service which would be static but can be added to here if required
+	enum services {
+		MARKETING, FINANCE, HR
+	}
+	// add enum for departments which would be static but can be added to here if required
+	enum departments {
+		DIRECTORY, FILESERVER, WEBSERVER
+	}
 
 	public static void main(String[] args) {
 		// Declare our menu object for use during the program
@@ -15,19 +24,19 @@ public class Jassets {
 		ArrayList<ServerAsset> serverAssets = new ArrayList<ServerAsset>();
 		
 		// Populate serverAssets ArrayList
-		serverAssets.add(new ServerAsset("8GB", 16, "SSD", "Directory", "10.10.10.100"));
-		serverAssets.add(new ServerAsset("16GB", 8, "HD", "Fileserver", "10.10.10.110"));
+		serverAssets.add(new ServerAsset("8GB", 16, "SSD", departments.DIRECTORY.toString(), "10.10.10.100"));
+		serverAssets.add(new ServerAsset("16GB", 8, "HD", departments.FILESERVER.toString(), "10.10.10.110"));
 		// Add an additional element to serverAssets ArrayList
-		serverAssets.add(new ServerAsset("32GB", 16, "SSD", "Directory", "10.10.10.120"));
+		serverAssets.add(new ServerAsset("32GB", 16, "SSD", departments.WEBSERVER.toString(), "10.10.10.120"));
 	
 		
 		// Declare empty workStationAssets Array
 		WorkstationAsset workstationAssets[] = new WorkstationAsset[4];
 		// Create workStationAssets to populate Array
-		WorkstationAsset ws01 = new WorkstationAsset("32GB", 8, "SSD", "Marketing", 'Y');
-		WorkstationAsset ws02 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
-		WorkstationAsset ws03 = new WorkstationAsset("16GB", 4, "SSD", "Finance", 'N');
-		WorkstationAsset ws04 = new WorkstationAsset("16GB", 8, "SSD", "HR", 'N');
+		WorkstationAsset ws01 = new WorkstationAsset("32GB", 8, "SSD", services.MARKETING.toString(), 'Y');
+		WorkstationAsset ws02 = new WorkstationAsset("16GB", 4, "SSD", services.FINANCE.toString(), 'N');
+		WorkstationAsset ws03 = new WorkstationAsset("16GB", 4, "SSD", services.FINANCE.toString(), 'N');
+		WorkstationAsset ws04 = new WorkstationAsset("16GB", 8, "SSD", services.HR.toString(), 'N');
 		
 		// populate workstationAssets Array
 		workstationAssets[0] = ws01;
@@ -35,7 +44,7 @@ public class Jassets {
 		workstationAssets[2] = ws03;
 		workstationAssets[3] = ws04;
 		// Add an additional element to workstationAssets Array
-		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", "Marketing", 'Y')};
+		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", services.MARKETING.toString(), 'Y')};
 		
 
 		// Declare required variables.
