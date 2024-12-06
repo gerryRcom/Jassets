@@ -7,7 +7,7 @@ public class JassetMenu {
 	// Output the loading menu
 	public void loadingMenu(){
 		String loadingMessage = ". . . .";
-		System.out.println("### Jasset Asset Manager " + seasonOutput() + " edition.");
+		System.out.println("### Jasset Asset Manager: " + seasonOutput() + " edition.");
 		System.out.println("###");
 		System.out.print("### Populating assets ");
 		
@@ -54,19 +54,12 @@ public class JassetMenu {
 		LocalDate todayDate = LocalDate.now();
 		String calcSeason = todayDate.toString().substring(5,6) + todayDate.toString().substring(6,7);
 		// switch statement to calculate the season
+		// Requires v 21 https://docs.oracle.com/en/java/javase/21/language/switch-expressions-and-statements.html
 		switch (calcSeason) {
-		case "02","03","04":
-			calcSeason = "Spring";
-			break;
-		case "05","06","07":
-			calcSeason = "Summer";
-			break;
-		case "08","09","10":
-			calcSeason = "Autumn";
-			break;
-		default:
-			calcSeason = "Winter";
+		case "02","03","04" -> {return "Spring";}
+		case "05","06","07" -> {return "Summer";}
+		case "08","09","10" -> {return "Autumn";}
+		default -> {return "Winter";}
 		}
-		return(calcSeason);
 	}
 }
