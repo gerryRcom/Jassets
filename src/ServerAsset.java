@@ -58,4 +58,5 @@ public class ServerAsset extends BaseAsset implements ClassMenu{
 		System.out.println("IP: "+ getServerIP());
 		System.out.println("###################");
 	}
+
 }

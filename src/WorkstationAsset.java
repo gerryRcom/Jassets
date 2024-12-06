@@ -59,4 +59,5 @@ public class WorkstationAsset extends BaseAsset implements ClassMenu{
 		System.out.println("Portable: "+ getWorkstationPortable());
 		System.out.println("###################");
 	}
+	
 }

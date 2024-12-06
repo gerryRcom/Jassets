@@ -1,10 +1,13 @@
+// Required imports
+import java.time.LocalDate;
+
 // Class for the Jasset menu system which will be called during runtime
 public class JassetMenu {
 	
 	// Output the loading menu
 	public void loadingMenu(){
 		String loadingMessage = ". . . .";
-		System.out.println("### Jasset Asset Manager");
+		System.out.println("### Jasset Asset Manager " + seasonOutput() + " edition.");
 		System.out.println("###");
 		System.out.print("### Populating assets ");
 		
@@ -46,6 +49,24 @@ public class JassetMenu {
 		System.out.print("### Enter choice (1,2,5): ");
 	}
 	
-
-
+	// Private method to return current season to reflect current version of app in loading menu.
+	private String seasonOutput() {
+		LocalDate todayDate = LocalDate.now();
+		String calcSeason = todayDate.toString().substring(5,6) + todayDate.toString().substring(6,7);
+		// switch statement to calculate the season
+		switch (calcSeason) {
+		case "02","03","04":
+			calcSeason = "Spring";
+			break;
+		case "05","06","07":
+			calcSeason = "Summer";
+			break;
+		case "08","09","10":
+			calcSeason = "Autumn";
+			break;
+		default:
+			calcSeason = "Winter";
+		}
+		return(calcSeason);
+	}
 }

@@ -46,12 +46,13 @@ public class Jassets {
 		// Add an additional element to workstationAssets Array
 		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", services.MARKETING.toString(), 'Y')};
 		
-
 		// Declare required variables.
 		int menuChoice = 0;
-		// Enter a loop until a valid option is selected.
 		
+		// Call loadingMenu method for initial loading screen
 		jassetMenu.loadingMenu();
+		
+		// Enter a loop until a valid option is selected.
 		do {
 			
 
