@@ -1,5 +1,5 @@
-// Workstation asset that will extend the BaseAsset class.
-public class WorkstationAsset extends BaseAsset {
+// Workstation asset that will extend the BaseAsset class and implement ClassMenu interface.
+public class WorkstationAsset extends BaseAsset implements ClassMenu{
 	// Declare variables that are specific to WorkstationAsset asset types
 	String workstationDept = "";
 	char workstationPortable = 'N';
