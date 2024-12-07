@@ -10,7 +10,7 @@ public class ServerAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Main constructor for class including all value parameters.
-	public ServerAsset(String memory, int cores, String storage, String service, String ip) {
+	ServerAsset(String memory, int cores, String storage, String service, String ip) {
 		setAssetID();
 		setServerAssetID(getAssetID());
 		setAssetMemory(memory);
@@ -21,29 +21,29 @@ public class ServerAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Getter to return server service
-	public String getServerService() {
+	String getServerService() {
 		return serverService;
 	}
 	// Getter to return server ip
-	public String getServerIP() {
+	String getServerIP() {
 		return serverIP;
 	}
 	// Getter to return server assetid
-	public int getServerAssetID() {
+	int getServerAssetID() {
 		return serverAssetID;
 	}
 	
 
 	// Setter to assign service
-	public void setServerService(String serverService) {
+	void setServerService(String serverService) {
 		this.serverService = serverService;
 	}
 	// Setter to assign IP
-	public void setServerIP(String serverIP) {
+	void setServerIP(String serverIP) {
 		this.serverIP = serverIP;
 	}
 	// Setter to assign Asset ID
-	public void setServerAssetID(int serverAssetID) {
+	void setServerAssetID(int serverAssetID) {
 		this.serverAssetID = serverAssetID;
 	}
 

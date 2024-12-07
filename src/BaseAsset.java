@@ -9,39 +9,39 @@ public abstract class BaseAsset {
 	String storageType = "";
 	
 	// Abstract method for formatted output, will be implemented by sub-class
-	public abstract void niceOutput();
+	abstract void niceOutput();
 
 	// Getter to return asset memory
-	public String getAssetMemory() {
+	String getAssetMemory() {
 		return assetMemory;
 	}
 	// Getter to return asset cores
-	public int getAssetCores() {
+	int getAssetCores() {
 		return assetCores;
 	}
 	// Getter to return asset storage type
-	public String getStorageType() {
+	String getStorageType() {
 		return storageType;
 	}
 	// Getter to return asset ID
-	public static int getAssetID() {
+	static int getAssetID() {
 		return assetID;
 	}
 
 	// Setter to increment asset ID
-	public static void setAssetID() {
+	static void setAssetID() {
 		assetID = assetID + 1;
 	}
 	// Setter to assign Memory
-	public void setAssetMemory(String assetMemory) {
+	void setAssetMemory(String assetMemory) {
 		this.assetMemory = assetMemory;
 	}
 	// Setter to assign Cores
-	public void setAssetCores(int assetCores) {
+	void setAssetCores(int assetCores) {
 		this.assetCores = assetCores;
 	}
 	// Setter to assign Storage Type
-	public void setStorageType(String storageType) {
+	void setStorageType(String storageType) {
 		this.storageType = storageType;
 	}
 	

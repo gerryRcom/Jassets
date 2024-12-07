@@ -11,7 +11,7 @@ public class WorkstationAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Main constructor for class including all value parameters.
-	public WorkstationAsset(String memory, int cores, String storage, String department, char portable) {
+	WorkstationAsset(String memory, int cores, String storage, String department, char portable) {
 		setAssetID();
 		setWorkstationAssetID(getAssetID());
 		setAssetMemory(memory);
@@ -22,29 +22,29 @@ public class WorkstationAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Getter to return workstation dept
-	public String getWorkstationDept() {
+	String getWorkstationDept() {
 		return workstationDept;
 	}
 	// Getter to return workstation portable status
-	public char getWorkstationPortable() {
+	char getWorkstationPortable() {
 		return workstationPortable;
 	}
 	// Getter to return workstation asset id
-	public int getWorkstationAssetID() {
+	int getWorkstationAssetID() {
 		return workstationAssetID;
 	}
 	
 	
 	// Setter to assign Department
-	public void setWorkstationDept(String workstationDept) {
+	void setWorkstationDept(String workstationDept) {
 		this.workstationDept = workstationDept;
 	}
 	// Setter to assign portable status
-	public void setWorkstationPortable(char workstationPortable) {
+	void setWorkstationPortable(char workstationPortable) {
 		this.workstationPortable = workstationPortable;
 	}
 	// Setter to assign asset ID
-	public void setWorkstationAssetID(int workstationAssetID) {
+	void setWorkstationAssetID(int workstationAssetID) {
 		this.workstationAssetID = workstationAssetID;
 	}
 

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class JassetMenu {
 	
 	// Output the loading menu
-	public void loadingMenu(){
+	void loadingMenu(){
 		String loadingMessage = ". . . .";
 		System.out.println("### Jasset Asset Manager: " + seasonOutput() + " edition.");
 		System.out.println("###");
@@ -26,7 +26,7 @@ public class JassetMenu {
 	}
 	
 	// Output the main application menu
-	public void mainMenu(){
+	void mainMenu(){
 		System.out.println("###");
 		System.out.println("### Please choose an option from the menu below");
 		System.out.println("### -------------------------------------------");
@@ -37,7 +37,7 @@ public class JassetMenu {
 	}
 	
 	// Output the view assets sub menu
-	public void viewAssets(){
+	void viewAssets(){
 		System.out.println("### Jasset Asset Manager");
 		System.out.println("###");
 		System.out.println("### View assets, please choose asset type to view");
