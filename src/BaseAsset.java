@@ -8,9 +8,6 @@ public abstract class BaseAsset {
 	int assetCores = 0;
 	String storageType = "";
 	
-	// Abstract method for formatted output, will be implemented by sub-class
-	abstract void niceOutput();
-
 	// Getter to return asset memory
 	String getAssetMemory() {
 		return assetMemory;
@@ -44,5 +41,4 @@ public abstract class BaseAsset {
 	void setStorageType(String storageType) {
 		this.storageType = storageType;
 	}
-	
 }
