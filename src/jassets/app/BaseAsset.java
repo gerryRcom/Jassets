@@ -3,7 +3,7 @@ package jassets.app;
 // Declare BaseAsset as abstract as it will not be instantiated directly.
 public abstract class BaseAsset {
 	// Declare assetID as static as it will be shared across all assets.
-	static int assetID = 1000;
+	private static int assetID = 1000;
 	
 	// Declare variables that will be common across all asset types
 	String assetMemory = "";
