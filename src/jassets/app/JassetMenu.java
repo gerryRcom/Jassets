@@ -1,4 +1,6 @@
 // Required imports
+package jassets.app;
+
 import java.time.LocalDate;
 
 // Class for the Jasset menu system which will be called during runtime
