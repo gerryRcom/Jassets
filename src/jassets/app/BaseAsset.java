@@ -1,6 +1,6 @@
-// Declare BaseAsset as abstract as it will not be instantiated directly.
 package jassets.app;
 
+// Declare BaseAsset as abstract as it will not be instantiated directly.
 public abstract class BaseAsset {
 	// Declare assetID as static as it will be shared across all assets.
 	static int assetID = 1000;

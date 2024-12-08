@@ -1,6 +1,6 @@
-// Server asset that will extend the BaseAsset class and implement ClassMenu interface.
 package jassets.app;
 
+// Server asset that will extend the BaseAsset class and implement ClassMenu interface.
 public class ServerAsset extends BaseAsset implements ClassMenu{
 	// Declare variables that are specific to ServerAsset asset types
 	String serverService = "";

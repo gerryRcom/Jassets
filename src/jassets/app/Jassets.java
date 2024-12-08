@@ -1,7 +1,6 @@
-// Required imports here
-// scanner for user input
 package jassets.app;
 
+// Required imports here
 import java.util.Scanner;
 import java.util.ArrayList;
 
