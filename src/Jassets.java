@@ -44,7 +44,7 @@ public class Jassets {
 		workstationAssets[2] = ws03;
 		workstationAssets[3] = ws04;
 		// Add an additional element to workstationAssets Array
-		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", services.MARKETING.toString(), 'Y')};
+		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", departments.MARKETING.toString(), 'Y')};
 		
 		// Declare required variables.
 		int menuChoice = 0;
