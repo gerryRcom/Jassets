@@ -2,7 +2,9 @@ package jassets.app;
 
 // Required imports here
 import java.util.Scanner;
+import java.util.stream.Stream;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Jassets {
 	
@@ -47,6 +49,10 @@ public class Jassets {
 		// Add an additional element to workstationAssets Array
 		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", departments.MARKETING.toString(), 'Y')};
 		
+		// Declare a stream of workstation assets for use below.
+		Stream<WorkstationAsset> workstationStream = Arrays.stream(workstationAssets);
+
+		
 		// Declare required variables.
 		int menuChoice = 0;
 		
@@ -71,9 +77,8 @@ public class Jassets {
 					menuChoice = menuInput.nextInt();
 					// Check what option the user wants.
 					if (menuChoice == 1) {
-						for (int x = 0; x < workstationAssetsB.length; x++) {
-							workstationAssetsB[x].niceOutput();
-						}
+						// use stream for item iteration to make code more concise
+						workstationStream.forEach(item -> item.niceOutput());
 					}
 					else if (menuChoice == 2) {
 						for (int x = 0; x < serverAssets.size(); x++) {
