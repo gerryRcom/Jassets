@@ -1,7 +1,8 @@
 package jassets.app;
 
 // Server asset that will extend the BaseAsset class and implement ClassMenu interface.
-public class ServerAsset extends BaseAsset implements ClassMenu{
+// Set to final as it is extending a sealed class and will does not need to be extended itself
+public final class ServerAsset extends BaseAsset implements ClassMenu{
 	// Declare variables that are specific to ServerAsset asset types
 	String serverService = "";
 	String serverIP = "";

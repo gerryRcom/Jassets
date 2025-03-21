@@ -81,9 +81,8 @@ public class Jassets {
 						workstationStream.forEach(item -> item.niceOutput());
 					}
 					else if (menuChoice == 2) {
-						for (int x = 0; x < serverAssets.size(); x++) {
-							serverAssets.get(x).niceOutput();
-						}
+						// use a lambda to print ArrayList items to screen
+						serverAssets.forEach((item) -> {item.niceOutput();});
 					}
 				}
 				// Catch if a non-int is input in the menu and exit with a message.

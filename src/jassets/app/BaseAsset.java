@@ -1,7 +1,8 @@
 package jassets.app;
 
 // Declare BaseAsset as abstract as it will not be instantiated directly.
-public abstract class BaseAsset {
+// Seal class so only ServerAsset and WorkstationAsset can extend it.
+public sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	// Declare assetID as static as it will be shared across all assets.
 	private static int assetID = 1000;
 	
