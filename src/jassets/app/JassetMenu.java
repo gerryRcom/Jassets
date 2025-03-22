@@ -8,13 +8,16 @@ public class JassetMenu {
 	
 	// Output the loading menu
 	void loadingMenu(){
-		String loadingMessage = ". . . .";
+		// Define the loading menu character and the number of iterations to use in it
+		String loadingMessage = ". ";
+		int loadingLength[] = {5,4,3,2,1,0};
 		System.out.println("### Jasset Asset Manager: " + seasonOutput() + " edition.");
 		System.out.println("###");
 		System.out.print("### Populating assets ");
 		
-		// Output an small animated loading menu on startup 
-		for (int i = 0; i < loadingMessage.length(); i++) {
+		// Output a small animated loading menu on startup 
+		// use an unnamed variable in the loading menus for loop
+		for (int _ : loadingLength) {
 			// sleep for 400 ms between each character of the loading menu
 			try {
 				Thread.sleep(400);
@@ -22,9 +25,10 @@ public class JassetMenu {
 				e.printStackTrace();
 			}
 			// print out the loadingMessage a character at a time.
-			System.out.print(loadingMessage.charAt(i));
+			System.out.print(loadingMessage);
 		}
-		System.out.println(" .");
+		// jump to a new line once loading menu is complete.
+		System.out.println("");
 	}
 	
 	// Output the main application menu
