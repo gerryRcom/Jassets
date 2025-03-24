@@ -1,7 +1,7 @@
 package jassets.app;
 
 // Required imports
-import java.time.LocalDate;
+import java.time.YearMonth;
 
 // Class for the Jasset menu system which will be called during runtime
 public class JassetMenu {
@@ -57,14 +57,13 @@ public class JassetMenu {
 	
 	// Private method to return current season to reflect current version of app in loading menu.
 	private String seasonOutput() {
-		LocalDate todayDate = LocalDate.now();
-		String calcSeason = todayDate.toString().substring(5,6) + todayDate.toString().substring(6,7);
+		YearMonth dateInfo = YearMonth.now();
+		int currentMonth = dateInfo.getMonthValue();
 		// switch statement to calculate the season
-		// Requires v 21 https://docs.oracle.com/en/java/javase/21/language/switch-expressions-and-statements.html
-		switch (calcSeason) {
-		case "02","03","04" -> {return "Spring";}
-		case "05","06","07" -> {return "Summer";}
-		case "08","09","10" -> {return "Autumn";}
+		switch (currentMonth) {
+		case 2,3,4 -> {return "Spring";}
+		case 5,6,7 -> {return "Summer";}
+		case 8,9,10 -> {return "Autumn";}
 		default -> {return "Winter";}
 		}
 	}
