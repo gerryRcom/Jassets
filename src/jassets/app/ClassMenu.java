@@ -1,6 +1,7 @@
 package jassets.app;
 
 // Define Interface that will be implemented in required classes.
-interface ClassMenu {
+// Seal interface so only ServerAsset and WorkstationAsset can implement it.
+sealed interface ClassMenu permits ServerAsset, WorkstationAsset {
 	void niceOutput();
 }
