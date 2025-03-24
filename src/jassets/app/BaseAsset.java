@@ -2,14 +2,14 @@ package jassets.app;
 
 // Declare BaseAsset as abstract as it will not be instantiated directly.
 // Seal class so only ServerAsset and WorkstationAsset can extend it.
-public sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
+sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	// Declare assetID as static as it will be shared across all assets.
 	private static int assetID = 1000;
 	
 	// Declare variables that will be common across all asset types
-	String assetMemory = "";
-	int assetCores = 0;
-	String storageType = "";
+	private String assetMemory = "";
+	private int assetCores = 0;
+	private String storageType = "";
 	
 	// Getter to return asset memory
 	String getAssetMemory() {

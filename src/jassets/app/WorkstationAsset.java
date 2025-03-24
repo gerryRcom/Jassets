@@ -4,9 +4,9 @@ package jassets.app;
 // Set to final as it is extending a sealed class and will does not need to be extended itself
 public final class WorkstationAsset extends BaseAsset implements ClassMenu{
 	// Declare variables that are specific to WorkstationAsset asset types
-	String workstationDept = "";
-	char workstationPortable = 'N';
-	int workstationAssetID = 0;
+	private String workstationDept = "";
+	private char workstationPortable = 'N';
+	private int workstationAssetID = 0;
 
 	// Default constructor so new type can be instantiated with no values if required
 	public WorkstationAsset() {

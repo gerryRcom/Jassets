@@ -4,9 +4,9 @@ package jassets.app;
 // Set to final as it is extending a sealed class and will does not need to be extended itself
 public final class ServerAsset extends BaseAsset implements ClassMenu{
 	// Declare variables that are specific to ServerAsset asset types
-	String serverService = "";
-	String serverIP = "";
-	int serverAssetID = 0;
+	private String serverService = "";
+	private String serverIP = "";
+	private int serverAssetID = 0;
 
 	// Default constructor so new type can be instantiated with no values if required
 	public ServerAsset() {	
