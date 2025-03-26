@@ -2,6 +2,9 @@ package jassets.app;
 
 // Required imports
 import java.time.YearMonth;
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 // Class for the Jasset menu system which will be called during runtime
 public class JassetMenu {
@@ -12,6 +15,7 @@ public class JassetMenu {
 		String loadingMessage = ". ";
 		int loadingLength[] = {5,4,3,2,1,0};
 		System.out.println("### Jasset Asset Manager: " + seasonOutput() + " edition.");
+		System.out.println("### Install Date: " + aboutJassets());		
 		System.out.println("###");
 		System.out.print("### Populating assets ");
 		
@@ -53,6 +57,19 @@ public class JassetMenu {
 		System.out.println("### Exit  Jasset:    : 5");
 		System.out.println("###");
 		System.out.print("### Enter choice (1,2,5): ");
+	}
+	
+	// Define a function that will print some additional info About Jassets
+	private String aboutJassets(){
+		Path jassetsPath = Paths.get("");
+		//System.out.println(jassetsPath.toAbsolutePath().toString());
+		try {
+			BasicFileAttributes jassetsAttrb = Files.readAttributes(jassetsPath, BasicFileAttributes.class);
+			String installDate = jassetsAttrb.creationTime().toString();
+			return installDate;
+		} catch (IOException e){
+			return (e.toString());
+		}
 	}
 	
 	// Private method to return current season to reflect current version of app in loading menu.
