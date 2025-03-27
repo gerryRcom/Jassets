@@ -10,6 +10,7 @@ sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	private String assetMemory = "";
 	private int assetCores = 0;
 	private String storageType = "";
+	private double assetCost = 0.0;
 	
 	// Getter to return asset memory
 	String getAssetMemory() {
@@ -22,6 +23,10 @@ sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	// Getter to return asset storage type
 	String getStorageType() {
 		return storageType;
+	}
+	// Getter to return asset cost
+	double getAssetCost() {
+		return assetCost;
 	}
 	// Getter to return asset ID
 	static int getAssetID() {
@@ -43,5 +48,9 @@ sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	// Setter to assign Storage Type
 	void setStorageType(String storageType) {
 		this.storageType = storageType;
+	}
+	// Setter to assign asset cost
+	void setAssetCost(Double assetCost) {
+		this.assetCost = assetCost;
 	}
 }

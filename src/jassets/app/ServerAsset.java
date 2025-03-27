@@ -13,12 +13,13 @@ public final class ServerAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Main constructor for class including all value parameters.
-	ServerAsset(String memory, int cores, String storage, String service, String ip) {
+	ServerAsset(String memory, int cores, String storage, Double cost, String service, String ip) {
 		setAssetID();
 		setServerAssetID(getAssetID());
 		setAssetMemory(memory);
 		setAssetCores(cores);
 		setStorageType(storage);
+		setAssetCost(cost);
 		setServerService(service);
 		setServerIP(ip);		
 	}
@@ -57,6 +58,7 @@ public final class ServerAsset extends BaseAsset implements ClassMenu{
 		System.out.println("Memory: "+ getAssetMemory());
 		System.out.println("CPU Cores: "+ getAssetCores());
 		System.out.println("Storage Type: "+ getStorageType());
+		System.out.println("Asset Cost: "+ getAssetCost());
 		System.out.println("Service: "+ getServerService());
 		System.out.println("IP: "+ getServerIP());
 		System.out.println("###################");

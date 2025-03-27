@@ -14,12 +14,13 @@ public final class WorkstationAsset extends BaseAsset implements ClassMenu{
 	}
 	
 	// Main constructor for class including all value parameters.
-	WorkstationAsset(String memory, int cores, String storage, String department, char portable) {
+	WorkstationAsset(String memory, int cores, String storage, Double cost, String department, char portable) {
 		setAssetID();
 		setWorkstationAssetID(getAssetID());
 		setAssetMemory(memory);
 		setAssetCores(cores);
 		setStorageType(storage);
+		setAssetCost(cost);
 		setWorkstationDept(department);
 		setWorkstationPortable(portable);
 	}
@@ -58,6 +59,7 @@ public final class WorkstationAsset extends BaseAsset implements ClassMenu{
 		System.out.println("Memory: "+ getAssetMemory());
 		System.out.println("CPU Cores: "+ getAssetCores());
 		System.out.println("Storage Type: "+ getStorageType());
+		System.out.println("Asset Cost: "+ getAssetCost());
 		System.out.println("Service: "+ getWorkstationDept());
 		System.out.println("Portable: "+ getWorkstationPortable());
 		System.out.println("###################");
