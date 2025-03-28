@@ -94,7 +94,8 @@ public class Jassets {
 				}
 				// Exit application if user enters 5
 				}while (!(menuChoice == 5));
-				System.out.println("Exiting Jasset application, goodbye.");
+				//System.out.println("Exiting Jasset application, goodbye.");
+				jassetMenu.exitMenu();
 				// Close scanner
 				menuInput.close();
 				System.exit(0);
@@ -109,7 +110,8 @@ public class Jassets {
 		}
 		// Exit application if user enters 5
 		}while (!(menuChoice == 5));
-		System.out.println("Exiting Jasset application, goodbye.");
+		//System.out.println("Exiting Jasset application, goodbye.");
+		jassetMenu.exitMenu();
 		// Close scanner
 		menuInput.close();
 		System.exit(0);

@@ -2,6 +2,8 @@ package jassets.app;
 
 // Required imports
 import java.time.YearMonth;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -33,6 +35,35 @@ public class JassetMenu {
 		}
 		// jump to a new line once loading menu is complete.
 		System.out.println("");
+	}
+	
+	// Output the exit menu
+	void exitMenu(){
+		// Set border characters
+		String exitBorder1 = "#";
+		String exitBorder2 = "*";
+		
+		// Set 5 threads in the pool for outputting exit border
+		ExecutorService exitExecutor = Executors.newFixedThreadPool(5);
+        
+		// Create two Runnable lambdas for outputting alternate border characters using separate threads
+		Runnable exitMessage = () -> System.out.print(exitBorder1);
+	    Runnable exitUnderline = () -> System.out.print(exitBorder2);
+		
+	    System.out.println("#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*");
+	    System.out.println("#*  Exiting  Jassets,  Goodbye!");
+	    for (int i = 0; i< 25; i++) {
+			// sleep for 150 ms between each character of the exit menu
+			try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			// output the two characters using different threads
+			// occasionally we will see the character order off if the thread execution order changes
+			exitExecutor.execute(exitMessage);
+			exitExecutor.execute(exitUnderline);
+		}
 	}
 	
 	// Output the main application menu
