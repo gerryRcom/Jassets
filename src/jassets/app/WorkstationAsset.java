@@ -59,7 +59,7 @@ public final class WorkstationAsset extends BaseAsset implements ClassMenu{
 		System.out.println("Memory: "+ getAssetMemory());
 		System.out.println("CPU Cores: "+ getAssetCores());
 		System.out.println("Storage Type: "+ getStorageType());
-		System.out.println("Asset Cost: "+ getAssetCost());
+		System.out.println("Asset Cost: " + getAssetCost());
 		System.out.println("Service: "+ getWorkstationDept());
 		System.out.println("Portable: "+ getWorkstationPortable());
 		System.out.println("###################");

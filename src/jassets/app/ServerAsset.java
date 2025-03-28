@@ -58,7 +58,7 @@ public final class ServerAsset extends BaseAsset implements ClassMenu{
 		System.out.println("Memory: "+ getAssetMemory());
 		System.out.println("CPU Cores: "+ getAssetCores());
 		System.out.println("Storage Type: "+ getStorageType());
-		System.out.println("Asset Cost: "+ getAssetCost());
+		System.out.println("Asset Cost: " + getAssetCost());
 		System.out.println("Service: "+ getServerService());
 		System.out.println("IP: "+ getServerIP());
 		System.out.println("###################");

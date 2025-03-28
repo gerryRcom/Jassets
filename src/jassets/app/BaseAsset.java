@@ -1,4 +1,6 @@
 package jassets.app;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 // Declare BaseAsset as abstract as it will not be instantiated directly.
 // Seal class so only ServerAsset and WorkstationAsset can extend it.
@@ -24,9 +26,13 @@ sealed abstract class BaseAsset permits ServerAsset, WorkstationAsset {
 	String getStorageType() {
 		return storageType;
 	}
-	// Getter to return asset cost
-	double getAssetCost() {
-		return assetCost;
+	// Getter to return asset cost in currency format
+	String getAssetCost() {
+		// Set local to Ireland
+		Locale envLocale = Locale.of("en", "IE");
+		// Set currency based on locale that has been set, then return the cost in currency format
+		NumberFormat getCurrency = NumberFormat.getCurrencyInstance(envLocale);
+		return getCurrency.format(assetCost);
 	}
 	// Getter to return asset ID
 	static int getAssetID() {
