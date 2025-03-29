@@ -50,7 +50,7 @@ public class Jassets {
 		WorkstationAsset workstationAssetsB[] = {workstationAssets[0], workstationAssets[1], workstationAssets[2], workstationAssets[3], new WorkstationAsset("64GB", 16, "SSD", 1499.99, departments.MARKETING.toString(), 'Y')};
 		
 		// Declare a stream of workstation assets for use below.
-		Stream<WorkstationAsset> workstationStream = Arrays.stream(workstationAssets);
+		Stream<WorkstationAsset> workstationStream = Arrays.stream(workstationAssetsB);
 
 		
 		// Declare required variables.
