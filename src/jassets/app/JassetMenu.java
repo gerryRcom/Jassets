@@ -96,7 +96,7 @@ public class JassetMenu {
 		//System.out.println(jassetsPath.toAbsolutePath().toString());
 		try {
 			BasicFileAttributes jassetsAttrb = Files.readAttributes(jassetsPath, BasicFileAttributes.class);
-			String installDate = jassetsAttrb.creationTime().toString();
+			String installDate = jassetsAttrb.creationTime().toString().substring(0, 10);
 			return installDate;
 		} catch (IOException e){
 			return (e.toString());
